@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FizzBuzzTest\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Remove="FizzBuzzTest\UnitTest1.cs" />
+    <Compile Remove="FizzBuzzTest\obj\Debug\net5.0\FizzBuzzTest.AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="FizzBuzzTest\obj\Debug\net5.0\FizzBuzzTest.csproj.AssemblyReference.cache" />
+    <None Remove="FizzBuzzTest\obj\FizzBuzzTest.csproj.nuget.g.props" />
+    <None Remove="FizzBuzzTest\obj\FizzBuzzTest.csproj.nuget.g.targets" />
+    <None Remove="FizzBuzzTest\obj\project.assets.json" />
+    <None Remove="FizzBuzzTest\obj\project.nuget.cache" />
+    <None Remove="FizzBuzzTest\obj\FizzBuzzTest.csproj.nuget.dgspec.json" />
+    <None Remove="FizzBuzzTest\obj\Debug\net5.0\FizzBuzzTest.assets.cache" />
+    <None Remove="FizzBuzzTest\obj\Debug\net5.0\FizzBuzzTest.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Remove="FizzBuzzTest\obj\Debug\net5.0\FizzBuzzTest.AssemblyInfoInputs.cache" />
+  </ItemGroup>
+</Project>
