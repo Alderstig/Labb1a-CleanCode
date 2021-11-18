@@ -1,10 +1,10 @@
-﻿using NUnit.Framework;
-using FizzBuzz;
+﻿using System;
 using System.Collections.Generic;
+using NUnit.Framework;
 
 namespace FizzBuzzTest
 {
-    public class Tests
+    public class FizzBuzzTests
     {
         private readonly List<string> fizzBuzzList = FizzBuzz.FizzBuzz.CreateFizzBuzzList();
 
@@ -24,3 +24,4 @@ namespace FizzBuzzTest
         }
     }
 }
+
