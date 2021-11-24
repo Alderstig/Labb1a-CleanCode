@@ -5,7 +5,6 @@ namespace FizzBuzz
 {
     public static class FizzBuzz
     {
-        // <summary>Returns a list of FizzBuzz counting from 1 to 100 </summary>
         public static List<string> CreateFizzBuzzList()
         {
             var FizzBuzzList = new List<string>();
@@ -35,7 +34,6 @@ namespace FizzBuzz
             return FizzBuzzList;
         }
 
-        // <summary>Returns true if list matches the first 15 indexes of a FizzBuzz sequence</summary>
         public static bool MatchesSequence(List<string> list)
         {
             var correctFizzBuzzSequenceTo15 = new List<string> { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
@@ -50,7 +48,6 @@ namespace FizzBuzz
             }
         }
 
-        // <summary>Returns true if list is the correct length of 100</summary>
         public static bool IsCorrectLength(List<string> list)
         {
             var correctLength = 100;
