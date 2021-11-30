@@ -31,29 +31,29 @@ namespace FizzBuzzTest
         [Test]
         public void CreateFizzBuzzList_GivenFizzBuzzSequenceOfZeroToOneHundred_ReturnsTrueIfFizz()
         {
-            var firstIndexOfFizz = 2;
-            Assert.Equals(_fizzBuzzList[firstIndexOfFizz], "Fizz");
+            var firstInstanceOfFizzAtIndex = 2;
+            Assert.Equals(_fizzBuzzList[firstInstanceOfFizzAtIndex], "Fizz");
         }
 
         [Test]
         public void CreateFizzBuzzList_GivenFizzBuzzSequenceOfZeroToOneHundred_ReturnsTrueIfBuzz()
         {
-            var firstIndexOfBuzz = 4;
-            Assert.Equals(_fizzBuzzList[firstIndexOfBuzz], "Buzz");
+            var firstInstanceOfBuzzAtIndex = 4;
+            Assert.Equals(_fizzBuzzList[firstInstanceOfBuzzAtIndex], "Buzz");
         }
 
         [Test]
         public void CreateFizzBuzzList_GivenFizzBuzzSequenceOfZeroToOneHundred_ReturnsTrueIfFizzBuzz()
         {
-            var firstIndexOfFizzBuzz = 14;
-            Assert.Equals(_fizzBuzzList[firstIndexOfFizzBuzz], "FizzBuzz");
+            var firstInstanceOfFizzBuzzAtIndex = 14;
+            Assert.Equals(_fizzBuzzList[firstInstanceOfFizzBuzzAtIndex], "FizzBuzz");
         }
 
         [Test]
-        public void CreateFizzBuzzList_GivenFizzBuzzSequenceOfZeroToOneHundred_ReturnsTrueIfNumber()
+        public void CreateFizzBuzzList_GivenFizzBuzzSequenceOfZeroToOneHundred_ReturnsTrueIfFirstIndexIsNumber()
         {
-            var firstIndexOfNUmber = 0;
-            var extractedIndex = _fizzBuzzList[firstIndexOfNUmber];
+            var firstInstanceOfNumberAtIndex = 0;
+            var extractedIndex = _fizzBuzzList[firstInstanceOfNumberAtIndex];
             var IsNumber = int.TryParse(extractedIndex, out _); 
             Assert.IsTrue(IsNumber);
         }
