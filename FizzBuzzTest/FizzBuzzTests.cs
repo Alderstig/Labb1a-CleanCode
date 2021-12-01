@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 
 namespace FizzBuzzTest
 {
     public class FizzBuzzTests
     {
-        private readonly List<string> _fizzBuzzList;
+        private List<string> _fizzBuzzList;
 
-        public FizzBuzzTests()
+        [SetUp]
+        public void Setup()
         {
             _fizzBuzzList = FizzBuzz.FizzBuzz.CreateFizzBuzzList();
         }
@@ -17,14 +19,14 @@ namespace FizzBuzzTest
         public void MatchesSquence_GivenFirst15IndexesOfFizzBuzzSequence_ReturnsTrue()
         {
             var sequenceToCheck = _fizzBuzzList.GetRange(0, 15);
-            var result = FizzBuzz.FizzBuzz.MatchesSequence(sequenceToCheck);
+            var result = MatchesSequence(sequenceToCheck);
             Assert.That(result, Is.True);
         }
 
         [Test]
         public void IsCorrectLength_GivenFizzBuzzSequenceOfZeroToOneHundred_ReturnsTrue()
         {
-            var result = FizzBuzz.FizzBuzz.IsCorrectLength(_fizzBuzzList);
+            var result = IsCorrectLength(_fizzBuzzList);
             Assert.That(result, Is.True);
         }
 
@@ -56,6 +58,34 @@ namespace FizzBuzzTest
             var extractedIndex = _fizzBuzzList[firstInstanceOfNumberAtIndex];
             var IsNumber = int.TryParse(extractedIndex, out _); 
             Assert.IsTrue(IsNumber);
+        }
+
+        private static bool MatchesSequence(List<string> list)
+        {
+            var correctFizzBuzzSequenceTo15 = new List<string> { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
+
+            if (list.SequenceEqual(correctFizzBuzzSequenceTo15))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private static bool IsCorrectLength(List<string> list)
+        {
+            var correctLength = 100;
+
+            if (list.Count == correctLength)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
